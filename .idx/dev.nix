@@ -12,15 +12,14 @@
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-      # Add your preferred extensions here, for example:
-      # "dbaeumer.vscode-eslint"
+      # "vscodevim.vim"
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
-        npm-install = "npm ci --no-audit --prefer-offline --no-progress --timing || npm i --no-audit --no-progress --timing";
+        npm-install = "npm ci --no-audit --prefer-offline --no-progress --timing";
         # Open editors for the following files by default, if they exist:
-        default.openFiles = [ "src/App.tsx" ];
+        default.openFiles = [ "README.md" "src/App.css" "src/App.tsx" ];
       };
       # To run something each time the workspace is (re)started, use the `onStart` hook
     };
